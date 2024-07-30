@@ -9,12 +9,12 @@ import Cadastro from "./Cadastro";
 
 export default function Rotas(){
     return (
-        <NavigationContainer>
+        // <NavigationContainer>
             <Tab.Navigator>
                 <Tab.Screen name="Login" component={Login} options={{headerShown: false}}></Tab.Screen>
 
                 <Tab.Screen name="Cadastro" component={Cadastro} options={{headerShown: false}}></Tab.Screen>
             </Tab.Navigator>
-        </NavigationContainer>
+        // </NavigationContainer>
     )
 }
