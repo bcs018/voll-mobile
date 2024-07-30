@@ -5,8 +5,12 @@ import { TEMAS } from './estilos/temas';
 import { Titulo } from './componentes/Titulo';
 import { EntradaTexto } from './componentes/EntradaTexto';
 import { Botao } from './componentes/Botao';
+import { useNavigation } from "@react-navigation/native"
 
 export default function Login() {
+
+  const navigation = useNavigation();
+
   return (
       <VStack flex={1} alignItems={"center"} padding={5} justifyContent={"center"}>
           <StatusBar backgroundColor={TEMAS.colors.blue[800]} />
@@ -38,7 +42,7 @@ export default function Login() {
 
           <Box w={"100%"} flexDirection={"row"} justifyContent={"center"} mt={'26px'}>
               <Text>Ainda não tem cadastro? </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={()=> navigation.navigate('Cadastro')}>
                 <Text color={TEMAS.colors.blue[500]}>
                   Faça seu cadastro
                 </Text>
